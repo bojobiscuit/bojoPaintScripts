@@ -13,7 +13,7 @@ Quickly export to TGA for photoshop painting in iRacing.
 - **Save as TGA.jsx** - Creates a sim stamped paint with iRacing numbers baked onto it after
 - **Save as TGA Num.jsx** - Creates a paint no numbers. Add your own custom number, or don't at all!
 - **Save as TGA Spec.jsx** - Creates a spec map file. I believe iRacing needs to be open to have it create the mip file
-- **Delete All.jsx** - Deletes just your paint files (tga and mip) for that car and only your car.
+- **Delete All.jsx** - Deletes just your paint files (tga and mip) for only your car.
 
 ## Setting Photoshop shortcuts
 
