@@ -15,6 +15,13 @@ Quickly export to TGA for photoshop painting in iRacing.
 - **Save as TGA Spec.jsx** - Creates a spec map file. I believe iRacing needs to be open to have it create the mip file
 - **Delete All.jsx** - Deletes just your paint files (tga and mip) for only your car.
 
+## Special Case Scenario
+With the addition of NASCAR Gen 4 cars, they have decided to do a new pattern for paint templates. For the gen 4 example, there is the standard version of the car, and the superspeedway version. The superspeedway version when saved is in the file name pattern of `car_[iracingNumber]_ss.tga`. This works for both sim stamped and non sim stamped.
+
+If your car has a special version of it similar to that, all you need to do is add a hashtag and then the letters it uses to differential it.
+
+**Example**: Making a superspeedway version of the gen 4 car, you would add `#SS` at the end of your paint file's name. That lets the script know to append it with "_ss".
+
 ## Setting Photoshop shortcuts
 
 Photoshop > Edit > **Keyboard shortcuts**\
