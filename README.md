@@ -6,7 +6,7 @@ Quickly export to TGA for photoshop painting in iRacing.
 ## Quick Setup Steps
 1. Download the zip file from the [latest release](https://github.com/bojobiscuit/bojoPaintScripts/releases)
 2. Open each script in notepad and change the number to your iRacing number - `var userNumber = "655163";`
-4. Move files into your photoshop's paint folder - `C:\Program Files\Adobe\Adobe Photoshop 2025\Presets\Scripts`
+4. Move files into your photoshop's scripts folder - `C:\Program Files\Adobe\Adobe Photoshop 2025\Presets\Scripts`
 5. Restart Photoshop
 6. Set photoshop shortcuts for scripts _(optional, but recommended)_
 7. Open your paint file from the car's paint folder
