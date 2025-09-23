@@ -1,6 +1,8 @@
 # Bojo Paint Scripts
 Quickly export to TGA for photoshop painting in iRacing.
 
+[Link to Youtube Demonstration](https://www.youtube.com/watch?v=HLnrFgnuhdY)
+
 ## Quick Setup Steps
 1. Download the zip file from the [latest release](https://github.com/bojobiscuit/bojoPaintScripts/releases)
 2. Open each script in notepad and change the number to your iRacing number - `var userNumber = "655163";`
