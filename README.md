@@ -1,21 +1,21 @@
 # Bojo Paint Scripts
 Quickly export to TGA for photoshop painting in iRacing.
 
-[Link to Youtube Demonstration](https://www.youtube.com/watch?v=HLnrFgnuhdY)
+(new updated video coming soon for v2)
 
 ## Quick Setup Steps
 1. Download the zip file from the [latest release](https://github.com/bojobiscuit/bojoPaintScripts/releases)
-2. Open each script in notepad and change the number to your iRacing number - `var userNumber = "655163";`
-4. Move files into your photoshop's scripts folder - `C:\Program Files\Adobe\Adobe Photoshop 2025\Presets\Scripts`
-5. Restart Photoshop
-6. Set photoshop shortcuts for scripts _(optional, but recommended)_
-7. Open your paint file from the car's paint folder
+2. Move bojo folder into your photoshop's scripts folder - `C:\Program Files\Adobe\Adobe Photoshop 2025\Presets\Scripts`
+3. Restart Photoshop
+4. _(optional, but recommended)_ Set photoshop shortcuts for scripts 
 
 ## Scripts
 - **Save as TGA.jsx** - Creates a sim stamped paint with iRacing numbers baked onto it after
 - **Save as TGA Num.jsx** - Creates a paint no numbers. Add your own custom number, or don't at all!
 - **Save as TGA Spec.jsx** - Creates a spec map file. I believe iRacing needs to be open to have it create the mip file
 - **Delete All.jsx** - Deletes just your paint files (tga and mip) for only your car.
+- **Set Folder.jsx** - Extra script to change to export location for a paint file.
+- **Set UserNumber.jsx** - Extra script to set the iRacing usernumber.
 
 ## Special Case Scenarios
 
