@@ -1,4 +1,5 @@
 #target photoshop
+#include "bojoScripts.js"
 
 main();
 
@@ -8,27 +9,19 @@ function main() {
 
 	if (!documents.length) return;
 	
-	var userNumber = "655163";
+	// gets the user's iracing number, or prompts for one if it doesn't exist
+	var userNumber = checkForUserNumber(app);
+	if (userNumber == null) return;
+	
+	// gets the paint's folder, or prompts for one if one doesn't exist
+	saveToPath = checkForPaintPath(app);
+	if (saveToPath == null) return;		
 
 	try {
-		var folder = new Folder(activeDocument.path);
-		var files = folder.getFiles();
-		for (var i = 0; i < files.length; i++) {
-
-			// if my racing number exists in the filename
-			if (files[i].name.lastIndexOf(userNumber) > 0) {
-				
-				// if the file type is either tga or mip
-				if (files[i].name.lastIndexOf(".tga") > 0 || files[i].name.lastIndexOf(".mip") > 0) {
-					files[i].remove();
-				}
-			}
-		}
+		deleteMyFiles(userNumber);
 	}
 	catch (e) {
 		alert(e);
 		return;
 	}
-
-	// alert("Deleted all within\n\n" + activeDocument.path);
 }

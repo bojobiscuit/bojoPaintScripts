@@ -1,4 +1,5 @@
 #target photoshop
+#include "bojoScripts.js"
 
 main();
 
@@ -8,43 +9,44 @@ function main() {
 
 	if (!documents.length) return;
 	
-	var userNumber = "655163";
-
 	try {
-		var Name = "car_num_" + userNumber + ".tga";
 		
-		// getting the last word in filename to check for special car types
-		var savePath = activeDocument.path;
-		words = activeDocument.name.split(/\s+/);
-		var popped = words.pop();
-
-		// file type has a special car type
-		if (popped.charAt(0) === '#') {			
-			Name = "car_num_" + userNumber + "_" + popped.slice(1);
+		// gets the user's iracing number, or prompts for one if it doesn't exist
+		var userNumber = checkForUserNumber();
+		if (userNumber == null) return;
+		
+		var fileName = "car_num_" + userNumber;
+		const psdFileName = activeDocument.name.toLowerCase();
+			
+		// gets the paint's folder, or prompts for one if one doesn't exist
+		saveToPath = checkForPaintPath(app);
+		if (saveToPath == null) return;
+		
+		// paint has a special car type
+		var specialCase = checkForSpecialCase();
+		if (specialCase != null) {			
+			fileName = fileName + "_" + specialCase;
 		}
 		
-		// file is a helmet
-		else if (Name.lastIndexOf("helmet", 0) === 0) {
-			Name = "helmet_" + userNumber + ".tga";
+		// paint is a helmet
+		else if (stringContains(psdFileName, "helmet")) {
+			fileName = "helmet_" + userNumber;
 		}
 		
-		// file is a suit
-		else if (Name.lastIndexOf("suit", 0) === 0) {
-			Name = "suit_" + userNumber + ".tga";
+		// paint is a suit
+		else if (stringContains(psdFileName, "suit")) {
+			fileName = "suit_" + userNumber;
 		}
 		
-		var saveFile = File(savePath + '/' + Name);
-		saveTarga32(saveFile);
+		hideSpecMap();
+		
+		// save the paint
+		//alert(saveToPath + '/' + fileName + ".tga");
+		var saveFile = File(saveToPath + '/' + fileName + ".tga");
+		saveTarga32(saveFile);		
 	} 
 	catch (e) {
 		alert(e);
 		return;
 	}
 }
-
-function saveTarga32(saveFile) {
-	targaSaveOptions = new TargaSaveOptions();
-	targaSaveOptions.alphaChannels = true;
-	targaSaveOptions.resolution = TargaBitsPerPixels.THIRTYTWO;
-	activeDocument.saveAs(File(saveFile), targaSaveOptions, true, Extension.LOWERCASE);
-};
