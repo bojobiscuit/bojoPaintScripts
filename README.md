@@ -29,6 +29,8 @@ If your car has a special version of it similar to that, all you need to do is a
 
 **Example**: Making a superspeedway version of the gen 4 car, you would add `#SS` at the end of your paint file's name. That lets the script know to append it with "_ss".
 
+iRacing has a limitation where unfortunately to preview the special case car in the iRacing UI, you have to switch between the default car model and the different version to see the changes. So for the gen 4 car, you have to click the "stockcar" preview and then back to the "superspeedway stockcar" preview. I'm trying to contact iRacing about that.
+
 ## Setting Photoshop shortcuts
 
 Photoshop > Edit > **Keyboard shortcuts**\
