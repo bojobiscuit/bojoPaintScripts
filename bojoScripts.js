@@ -67,12 +67,15 @@ function isNewSavePath(app)
 
 function checkForSpecialCase()
 {
-	words = activeDocument.name.split(/\s+/);
-	var popped = words.pop();
-
 	// file type has a special car type
-	if (popped.charAt(0) === '#')
-		return popped.slice(1);
+	if (activeDocument.name.indexOf('#') > 0)
+	{
+		var specialCase = activeDocument.name.slice(activeDocument.name.indexOf('#') + 1);
+		if (specialCase.indexOf('.') > 0)
+			return specialCase.slice(0, specialCase.indexOf('.'));
+		else 
+			return specialCase;
+	}
 
 	return null;
 }
