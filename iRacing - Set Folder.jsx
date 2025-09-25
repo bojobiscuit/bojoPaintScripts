@@ -10,9 +10,9 @@ function main() {
 	if (!documents.length) return;
 
 	try {
-		savePaintPath(app, "")
-//		if (isNewSavePath(app))
-//			alert ("New path set!");
+//		savePaintPath(app, "")
+		if (isNewSavePath(app))
+			alert ("New path set!");
 	} 
 	catch (e) {
 		alert(e);
