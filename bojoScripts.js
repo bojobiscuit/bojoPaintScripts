@@ -87,7 +87,7 @@ function stringContains(stringA, stringB)
 
 function loadUserNumber()
 {
-    const saveFile = File("~/Documents/iRacing/paint/userNumber.txt");
+    const saveFile = File("~/userNumber.txt");
 	
     if (!saveFile.exists)
 		return null;
@@ -102,7 +102,7 @@ function loadUserNumber()
 
 function saveUserNumber(userNumber)
 {
-    const saveFile = File("~/Documents/iRacing/paint/userNumber.txt");
+	const saveFile = File("~/userNumber.txt");
 	
     if (saveFile.exists)
         saveFile.remove();
